@@ -58,7 +58,7 @@ The parameters are:
 
 Example:
 	
-	var params = [location.id, location.location.lat, location.location.lng, "10"];
+	var params = ['fid' : location.id, 'latitude' : location.location.lat, 'longitude' : location.location.lng, 'radius' : "10"];
 	DGGeofencing.startMonitoringRegion(params, function(result) {}, function(error) {
 		alert("failed to add region");
 	});
@@ -71,7 +71,7 @@ The parameters are:
 
 Example:
 
-	var params = [item.fid, item.latitude, item.longitude];
+	var params = ['fid' : item.fid, 'latitude' : item.latitude, 'longitude' : item.longitude];
 	DGGeofencing.stopMonitoringRegion(params, 
 	function(result) {
 
