@@ -4,6 +4,7 @@
 
     <name>DGGeofencing</name>
     <description>Cordova Geofencing Plugin</description>
+    <repo>https://github.com/dantesanh724/phonegap-geofencing.git</repo>
     <author>AnGe724</author>
     <license>Apache License, Version 2.0</license>
     <keywords>cordova, phonegap, geofencing, geofence</keywords>
