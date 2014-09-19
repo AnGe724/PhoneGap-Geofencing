@@ -204,3 +204,9 @@ distributed under the License is distributed on an "AS IS" BASIS,
 WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
+
+[cordova]: https://cordova.apache.org
+[PGB_plugin]: https://build.phonegap.com/plugins/413
+[CLI]: http://cordova.apache.org/docs/en/3.0.0/guide_cli_index.md.html#The%20Command-line%20Interface
+[PGB]: http://docs.build.phonegap.com/en_US/3.3.0/index.html
+[apache2_license]: http://opensource.org/licenses/Apache-2.0
