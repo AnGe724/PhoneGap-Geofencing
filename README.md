@@ -118,7 +118,7 @@ This setup will allow the JavaScript to receive updates both when the app is run
 Example:
 
 ```
-// gets called when region monitoring event is submitted from iOS
+// gets called when region monitoring event is submitted from iOS, Android
 function processRegionMonitorCallback (result) {
     var callbacktype = result.callbacktype;
 
