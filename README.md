@@ -36,17 +36,6 @@ Through the [Command-line Interface][CLI]:
 cordova plugin rm com.anh724.cordova.plugin.geofencing
 ```
 
-### PhoneGap Build
-Add the following xml to your config.xml to always use the latest version of this plugin:
-```xml
-<gap:plugin name="com.anh724.cordova.plugin.videorecordpreview" />
-```
-or to use an specific version:
-```xml
-<gap:plugin name="com.anh724.cordova.plugin.videorecordpreview" version="1.0.0" />
-```
-More informations can be found [here][PGB_plugin].
-
 ## INCLUDED FUNTIONS ##
 
 DGGeofencing.js contains the following functions:
