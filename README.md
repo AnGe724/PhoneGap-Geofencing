@@ -27,7 +27,7 @@ The plugin can either be installed into the local development environment or clo
 Through the [Command-line Interface][CLI]:
 ```bash
 # ~~ from master ~~
-cordova plugin add https://github.com/dantesanh724/VideoPlugin.git && cordova prepare
+cordova plugin add https://github.com/dantesanh724/phonegap-genfencing.git && cordova prepare
 ```
 
 ### Removing the Plugin from your project
