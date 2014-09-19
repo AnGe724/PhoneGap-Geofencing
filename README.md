@@ -176,7 +176,7 @@ function onDeviceReady () {
         console.log("init error");
     });
 
-    var params = ['1', '40.781552', '-73.967171', "150"];
+    var params = ['fid' : '1', 'latitude' : '40.781552', longitude : '-73.967171', 'radius' : "150"];
     window.plugins.DGGeofencing.startMonitoringRegion(params, function(result) { console.log('watching');}, function(error) {
         console.log("failed to add region");
     });
