@@ -143,11 +143,17 @@ public class DGGeofencing extends CordovaPlugin implements LocationListener
 	        }			
 			else if ("startMonitoringRegion".equals(action))
 	        {
-		        JSONObject params = parseParameters(data);
+		        /*JSONObject params = parseParameters(data);
 		        String regionId = params.getString("fid");
 		        double latitude = Double.valueOf(params.getString("latitude"));
 		        double longitude = Double.valueOf(params.getString("longitude"));
-		        float radius = Float.valueOf(params.getString("radius"));
+		        float radius = Float.valueOf(params.getString("radius"));*/
+
+		        String regionId = data.getString(0);
+		        double latitude = data.getDouble(1);
+		        double longitude = data.getDouble(2);
+		        float radius = Float.valueOf(data.getString(3));
+		        
 		        
 		        Log.d(TAG, "adding region " + regionId);
 		        
@@ -185,8 +191,10 @@ public class DGGeofencing extends CordovaPlugin implements LocationListener
 		    }
 	        else if ("stopMonitoringRegion".equals(action))
 		    {
-		        JSONObject params = parseParameters(data);
-		        String regionId = params.getString("fid");
+		        //JSONObject params = parseParameters(data);
+		        //String regionId = params.getString("fid");
+
+		        String regionId = data.getString(0);
 		        
 		        stopMonitoringRegion(regionId);
 		        
