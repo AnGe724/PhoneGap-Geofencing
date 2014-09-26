@@ -34,6 +34,15 @@
     if (self) {
         self.locationManager = [[CLLocationManager alloc] init];
         self.locationManager.delegate = self; // Tells the location manager to send updates to this object
+        
+        NSString *version = [[UIDevice currentDevice] systemVersion];
+        if ([version floatValue] >= 8.0f) //for iOS8
+        {
+            if ([self.locationManager respondsToSelector:@selector(requestWhenInUseAuthorization)]) {
+                [self.locationManager requestWhenInUseAuthorization];
+            }
+        }
+
         __locationStarted = NO;
         __highAccuracyEnabled = NO;
         self.locationData = nil;
