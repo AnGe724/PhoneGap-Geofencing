@@ -92,7 +92,12 @@
     if (authorizationStatusClassPropertyAvailable)
     { // iOS 4.2+
         NSUInteger authStatus = [CLLocationManager authorizationStatus];
-        return  (authStatus == kCLAuthorizationStatusAuthorized) || (authStatus == kCLAuthorizationStatusNotDetermined);
+        
+        NSString *version = [[UIDevice currentDevice] systemVersion];
+        if ([version floatValue] >= 8.0f) //for iOS8
+            return (authStatus == kCLAuthorizationStatusAuthorizedAlways || authStatus == kCLAuthorizationStatusAuthorizedWhenInUse);
+        else // for iOS < 8.0
+            return  (authStatus == kCLAuthorizationStatusAuthorized) || (authStatus == kCLAuthorizationStatusNotDetermined);
     } else if (regionMonitoringEnabledClassPropertyAvailable)
     { // iOS 4.0, 4.1
         BOOL regionMonitoringEnabled = [CLLocationManager regionMonitoringEnabled];
@@ -109,7 +114,12 @@
     if (authorizationStatusClassPropertyAvailable)
     {
         NSUInteger authStatus = [CLLocationManager authorizationStatus];
-        return  (authStatus == kCLAuthorizationStatusAuthorized) || (authStatus == kCLAuthorizationStatusNotDetermined);
+
+        NSString *version = [[UIDevice currentDevice] systemVersion];
+        if ([version floatValue] >= 8.0f) //for iOS8
+            return (authStatus == kCLAuthorizationStatusAuthorizedAlways || authStatus == kCLAuthorizationStatusAuthorizedWhenInUse);
+        else // for iOS < 8.0
+            return  (authStatus == kCLAuthorizationStatusAuthorized) || (authStatus == kCLAuthorizationStatusNotDetermined);
     }
     
     // by default, assume YES (for iOS < 4.2)
