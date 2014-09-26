@@ -23,7 +23,7 @@
         <source-file src="src/ios/src/DGGeofencing.m" />
     </platform>
 
-	<platform name="android">
+    <platform name="android">
 
         <source-file src="src/android/src/com/phonegap/geofencing/DGGeofencing.java" target-dir="src/com/phonegap/geofencing" />
         <source-file src="src/android/src/com/phonegap/geofencing/LocationChangedListener.java" target-dir="src/com/phonegap/geofencing" />
